@@ -18,7 +18,7 @@ latest_two = raw_images[-2:]
 
 # Step 2: Crop images and save to cropped_image
 import sys
-sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Web_Cam and Capturing'))
+sys.path.append('Web_Cam and Capturing')
 from cropped_capture import crop_chessboard
 import cv2
 
