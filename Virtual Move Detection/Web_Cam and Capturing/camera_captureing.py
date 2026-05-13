@@ -15,7 +15,7 @@ CROPPED_OUTPUT_DIR = os.path.join(SCRIPT_DIR, "cropped_image")
 RAW_OUTPUT_DIR = os.path.join(SCRIPT_DIR, "raw_image")
 
 # Place_recog integration.
-PLACE_RECOG_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "..", "Place_recog"))
+PLACE_RECOG_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "..", "Movment_Detection"))
 MOVE_DETECTOR_DIR = os.path.join(PLACE_RECOG_ROOT, "chess_move_detector")
 MOVE_OUTPUT_FILE = os.path.join(PLACE_RECOG_ROOT, "detected_move.txt")
 MOVE_STATE_FILE = os.path.join(MOVE_DETECTOR_DIR, "board_state.fen")

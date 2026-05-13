@@ -4,11 +4,11 @@ from glob import glob
 import subprocess
 
 # Paths
-RAW_IMAGE_DIR = os.path.join('Camera', 'raw_image')
-CROPPED_IMAGE_DIR = os.path.join('Camera', 'cropped_image')
-SAMPLE_DATA_DIR = os.path.join('Place_recog', 'chess_move_detector', 'sample_data')
-MOVE_DETECTOR_DIR = os.path.join('Place_recog', 'chess_move_detector')
-DETECTED_MOVE_FILE = os.path.join('Place_recog', 'detected_move.txt')
+RAW_IMAGE_DIR = os.path.join('Web_Cam and Capturing', 'raw_image')
+CROPPED_IMAGE_DIR = os.path.join('Web_Cam and Capturing', 'cropped_image')
+SAMPLE_DATA_DIR = os.path.join('Movment_Detection', 'chess_move_detector', 'sample_data')
+MOVE_DETECTOR_DIR = os.path.join('Movment_Detection', 'chess_move_detector')
+DETECTED_MOVE_FILE = os.path.join('Movment_Detection', 'detected_move.txt')
 
 # Step 1: Get latest two raw images
 raw_images = sorted(glob(os.path.join(RAW_IMAGE_DIR, '*.jpg')), key=os.path.getmtime)
@@ -17,7 +17,9 @@ if len(raw_images) < 2:
 latest_two = raw_images[-2:]
 
 # Step 2: Crop images and save to cropped_image
-from Camera.cropped_capture import crop_chessboard
+import sys
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Web_Cam and Capturing'))
+from cropped_capture import crop_chessboard
 import cv2
 
 cropped_paths = []
