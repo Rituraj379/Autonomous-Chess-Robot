@@ -1,4 +1,4 @@
-# Autonomous Chess Robot
+# ♕ Autonomous Chess Robot ♕
 
 An advanced chess-playing robot system that combines artificial intelligence, robotics, and computer vision to play chess autonomously. The system detects board state changes through computer vision, evaluates positions using a dedicated chess engine, controls a robotic arm to make moves, and communicates with human players.
 
